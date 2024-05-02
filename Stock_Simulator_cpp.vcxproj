@@ -19,6 +19,8 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="experiment\simulation\algorithm.cpp" />
+    <ClCompile Include="experiment\simulation\auth.cpp" />
     <ClCompile Include="src\errorHandler.cpp" />
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\module\auth.cpp" />

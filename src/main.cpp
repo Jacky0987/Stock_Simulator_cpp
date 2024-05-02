@@ -8,9 +8,9 @@
 #include "module/auth.h"
 
 bool loggedStatus = false;
-void menu();
+void menu2();
 
-void menu() {
+void menu2() {
 	
 }
 int main() {
@@ -73,7 +73,7 @@ int main() {
 	int choice_2;
 	while (currentLoggedInUser.empty() == false && loggedStatus == true) {
 		std::cout << "You are logged in as " << currentLoggedInUser << std::endl;
-		menu();
+		menu2();
 	}
 	return 0;
 }
