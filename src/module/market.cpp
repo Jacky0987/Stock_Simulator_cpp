@@ -30,6 +30,7 @@ Stock* Market::get_stock(const std::string& code) {
     return nullptr;
 }
 
+
 void Market::list_stocks() const {
     for (const auto& pair : stocks) {
         const Stock* stock = pair.second;

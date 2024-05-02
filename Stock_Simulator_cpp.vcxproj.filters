@@ -42,6 +42,9 @@
     <ClCompile Include="src\errorHandler.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="src\module\player.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include=".gitattributes" />
@@ -67,6 +70,9 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="src\errorHandler.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\module\player.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

@@ -1,11 +1,10 @@
-/*
 #ifndef PLAYER_H  
 #define PLAYER_H  
 
 #include <string>  
 #include <unordered_map>  
 #include <vector>  
-#include "stock.h"  
+#include "stock.h" // 假设stock.h定义了Stock类  
 
 class Transaction {
 public:
@@ -13,9 +12,7 @@ public:
     std::string stock_code;
     double price;
     int quantity;
-
-    Transaction(std::string player_id, std::string stock_code, double price, int quantity)
-        : player_id(player_id), stock_code(stock_code), price(price), quantity(quantity) {}
+    // 可以根据需要添加构造函数、析构函数等  
 };
 
 class Player {
@@ -25,12 +22,17 @@ public:
     std::unordered_map<std::string, int> stock_holdings;
     std::vector<Transaction> transaction_history;
 
-    Player(std::string player_id, double initial_cash_balance)
-        : player_id(player_id), cash_balance(initial_cash_balance) {}
+    Player(const std::string& id, double initial_cash);
+    ~Player();
 
-    // Add more member functions as needed  
+    void buy_stock(const Stock& stock, int quantity);
+    void sell_stock(const std::string& stock_code, int quantity);
+    void view_holdings() const;
+    void view_transaction_history() const;
+
+private:
+    // 私有成员函数，用于处理交易记录  
+    void record_transaction(const std::string& stock_code, double price, int quantity);
 };
 
 #endif // PLAYER_H
-
-*/

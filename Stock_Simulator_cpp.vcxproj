@@ -25,6 +25,7 @@
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\module\auth.cpp" />
     <ClCompile Include="src\module\market.cpp" />
+    <ClCompile Include="src\module\player.cpp" />
     <ClCompile Include="src\module\stock.cpp" />
     <ClCompile Include="src\ui\ui.cpp" />
     <ClCompile Include="src\utils\time.cpp" />
@@ -43,6 +44,7 @@
     <ClInclude Include="src\errorHandler.h" />
     <ClInclude Include="src\module\auth.h" />
     <ClInclude Include="src\module\market.h" />
+    <ClInclude Include="src\module\player.h" />
     <ClInclude Include="src\module\stock.h" />
     <ClInclude Include="src\utils\time.h" />
   </ItemGroup>
