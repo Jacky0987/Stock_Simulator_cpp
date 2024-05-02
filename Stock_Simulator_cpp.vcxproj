@@ -19,8 +19,6 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="experiment\simulation\algorithm.cpp" />
-    <ClCompile Include="experiment\simulation\auth.cpp" />
     <ClCompile Include="src\errorHandler.cpp" />
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\module\auth.cpp" />
@@ -37,6 +35,14 @@
   </ItemGroup>
   <ItemGroup>
     <Text Include="LICENSE.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\errorHandler.h" />
+    <ClInclude Include="src\module\auth.h" />
+    <ClInclude Include="src\module\market.h" />
+    <ClInclude Include="src\module\stock.h" />
+    <ClInclude Include="src\module\user.h" />
+    <ClInclude Include="src\utils\time.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>

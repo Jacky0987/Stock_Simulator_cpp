@@ -15,12 +15,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="experiment\simulation\algorithm.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="experiment\simulation\auth.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="src\module\auth.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
@@ -53,5 +47,25 @@
   </ItemGroup>
   <ItemGroup>
     <Text Include="LICENSE.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\module\market.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\module\stock.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\module\user.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\module\auth.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\errorHandler.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\utils\time.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
