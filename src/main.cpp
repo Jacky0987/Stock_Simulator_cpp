@@ -6,14 +6,17 @@
 #include <string>
 
 #include "module/auth.h"
+#include "module/stock.h"
 
 bool loggedStatus = false;
 void menu2();
 
 void menu2() {
-	
+	int option2;
+	std::cin >> option2;
 }
 int main() {
+
 	loadUsers();
 	while (currentLoggedInUser == "" && (loggedStatus == false)) {
 		std::cout << "Welcome to Stock Simulator developed by Jacky0987!" << std::endl;

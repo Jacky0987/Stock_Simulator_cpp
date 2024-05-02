@@ -26,7 +26,6 @@
     <ClCompile Include="src\module\auth.cpp" />
     <ClCompile Include="src\module\market.cpp" />
     <ClCompile Include="src\module\stock.cpp" />
-    <ClCompile Include="src\module\user.cpp" />
     <ClCompile Include="src\ui\ui.cpp" />
     <ClCompile Include="src\utils\time.cpp" />
   </ItemGroup>
@@ -34,6 +33,8 @@
     <None Include=".gitattributes" />
     <None Include=".gitignore" />
     <None Include="README.md" />
+    <None Include="src\data\user.dat" />
+    <None Include="users.dat" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="LICENSE.txt" />
@@ -43,7 +44,6 @@
     <ClInclude Include="src\module\auth.h" />
     <ClInclude Include="src\module\market.h" />
     <ClInclude Include="src\module\stock.h" />
-    <ClInclude Include="src\module\user.h" />
     <ClInclude Include="src\utils\time.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">

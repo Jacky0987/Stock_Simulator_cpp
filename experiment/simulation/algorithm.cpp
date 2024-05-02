@@ -1,3 +1,4 @@
+/*
 #include <iostream>
 #include <cmath>
 #include <random>
@@ -37,4 +38,4 @@ int main() {
 	std::cout << "模拟后的股票价格: " << finalPrice << std::endl;
 
 	return 0;
-}
+}*/
