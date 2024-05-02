@@ -4,19 +4,73 @@
 #include <sstream>
 #include <map>
 #include <string>
+#include <conio.h>
+#include <chrono>  
+#include <thread>
+
 
 #include "module/auth.h"
 #include "module/stock.h"
+#include "module/player.h"
+#include "module/market.h"
+
 
 bool loggedStatus = false;
 void menu2();
 
 void menu2() {
-	int option2;
+	Market market;
+	int option2, quantity;
+	double currentBalance = 2000000;
+	std::string stock_name;
+	Player player(currentLoggedInUser, currentBalance);
+	std::cout << "1. View Stock List\n";
+	std::cout << "2. Buy Stock\n";
+	std::cout << "3. Sell Stock\n";
+	std::cout << "4. View Stock Detail\n";
+	std::cout << "5. View User Profile\n";
+	std::cout << "6. View Transaction History\n";
+	std::cout << "7. View Stock Price Chart\n";
 	std::cin >> option2;
+	switch (option2) {
+	case 1:
+		system("cls");
+		std::cout << "The full list of stocks is as follows:" << std::endl;
+		market.update_all_stock_prices();
+		market.list_stocks();
+		_getch();
+		break;
+	case 2:
+		std::cout << "What stock do you want to buy?" << std::endl;
+		std::cin >> stock_name;
+		std::cout << "How many do you want to buy?" << std::endl;
+		std::cin >> quantity;
+		_getch();
+		break;
+	case 3:
+		
+		break;
+	case 4:
+		
+		break;
+	case 5:
+		
+		break;
+	case 6:
+		
+		break;
+	case 7:
+		
+		break;
+	default:
+		std::cout << "Invalid option." << std::endl;
+		break;
+	}
 }
-int main() {
 
+
+int main() {
+	Market market;
 	loadUsers();
 	while (currentLoggedInUser == "" && (loggedStatus == false)) {
 		std::cout << "Welcome to Stock Simulator developed by Jacky0987!" << std::endl;
@@ -61,6 +115,7 @@ int main() {
 			// 恢复 cout 的原始缓冲区
 			std::cout.rdbuf(orig_buf);
 			// 继续其他正确显示输出的操作
+			_getch();
 
 		}
 		else if (choice == 3) {
@@ -73,9 +128,11 @@ int main() {
 			std::cout << "Invalid choice." << std::endl;
 		}
 	}
-	int choice_2;
 	while (currentLoggedInUser.empty() == false && loggedStatus == true) {
+		system("cls");
+		std::cout << "Welcome to Stock Simulator developed by Jacky0987!" << std::endl;
 		std::cout << "You are logged in as " << currentLoggedInUser << std::endl;
+
 		menu2();
 	}
 	return 0;

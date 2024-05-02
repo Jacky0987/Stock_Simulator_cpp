@@ -46,16 +46,14 @@ double Stock::get_current_price() const {
 
 void Stock::set_current_price(double price) {
     double previous_price = current_price;
+    last_price = previous_price; // 更新上一次的价格为当前价格
     current_price = price;
 
     // 计算并存储从上一次价格到当前价格的变化百分比  
     if (last_price != 0.0) {
-        change = ((current_price - last_price) / last_price) * 100.0;
+        Stock::change = ((current_price - last_price) / last_price) * 100.0;
     }
-    last_price = current_price; // 更新上一次的价格为当前价格  
-
-    // 可以在这里添加记录价格历史的代码，如果需要的话  
-    record_price_history(price, "Price Update");  
+    last_price = current_price; // 更新上一次的价格为当前价格   
 }
 
 double Stock::get_change_since_last_update() const {
@@ -74,4 +72,3 @@ void Stock::update_price(double mu, double sigma, double dt, int steps) {
     double new_price = simulateStockPrice(current_price, mu, sigma, dt, steps);
     set_current_price(new_price);
 }
-

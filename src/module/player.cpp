@@ -6,9 +6,13 @@
 #include <iostream>  
 #include <iomanip>  
 
+#include "auth.h"
+
+
 Player::Player(const std::string& id, double initial_cash)
     : player_id(id), cash_balance(initial_cash) {
 }
+
 
 Player::~Player() {
     // 在这个例子中，我们不需要在析构函数中做特殊的清理工作  

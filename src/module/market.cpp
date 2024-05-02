@@ -1,11 +1,22 @@
 // market.cpp  
-#include "market.h"  
-#include <iostream>  
+#include <iostream>
+#include <fstream>
+#include <sstream>
+#include <map>
+#include <string>
+
+#include "auth.h"
+#include "stock.h"
+#include "player.h"
+#include "market.h"
+
 
 Market::Market() {
-    // Constructor implementation if needed  
+    // Initialize the market with some stocks
+    add_stock(Stock("AAPL", "Apple Inc.", 150.00));
+    add_stock(Stock("AMZN", "Amazon.com Inc.", 2000.00));
+    add_stock(Stock("GOOG", "Alphabet Inc.", 1000.00));
 }
-
 Market::~Market() {
     for (auto& pair : stocks) {
         delete pair.second;
@@ -39,5 +50,12 @@ void Market::list_stocks() const {
             << ", Current Price: " << stock->get_current_price()
             << ", Change: " << stock->get_change_since_last_update() << "%"
             << std::endl;
+    }
+}
+
+void Market::update_all_stock_prices() {
+     for (auto& pair : stocks) {
+        Stock* stock = pair.second;
+        stock->update_price(0.05 , 0.2, 1.0 / 252 , 1);
     }
 }

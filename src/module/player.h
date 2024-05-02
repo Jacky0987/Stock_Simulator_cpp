@@ -4,7 +4,11 @@
 #include <string>  
 #include <unordered_map>  
 #include <vector>  
-#include "stock.h" // 假设stock.h定义了Stock类  
+
+#include "stock.h" 
+#include "auth.h"
+#include "player.h"
+#include "market.h"
 
 class Transaction {
 public:
@@ -29,7 +33,6 @@ public:
     void sell_stock(const std::string& stock_code, int quantity);
     void view_holdings() const;
     void view_transaction_history() const;
-
 private:
     // 私有成员函数，用于处理交易记录  
     void record_transaction(const std::string& stock_code, double price, int quantity);
